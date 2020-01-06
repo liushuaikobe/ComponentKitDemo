@@ -15,9 +15,9 @@ typedef void (^YCQuantityMaxOverflowBlock)(NSInteger maxQuantity);
 typedef void (^YCQuantityMinOverflowBlock)(NSInteger minQuantity);
 
 struct YCQuantityComponentConfiguration {
-    NSInteger maxValue;
-    NSInteger minValue;
-    NSInteger currentValue;
+    NSInteger maxValue = NSIntegerMax;
+    NSInteger minValue = 1;
+    NSInteger currentValue = 1;
     YCQuantityChangedBlock quantityChangedBlock;
     YCQuantityMaxOverflowBlock quantityMaxOverflowBlock;
     YCQuantityMinOverflowBlock quantityMinOverflowBlock;
