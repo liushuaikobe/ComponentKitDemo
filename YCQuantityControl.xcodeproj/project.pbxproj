@@ -15,6 +15,7 @@
 		4B2F002023C19835009C2CB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B2F001E23C19835009C2CB8 /* LaunchScreen.storyboard */; };
 		4B2F002323C19835009C2CB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F002223C19835009C2CB8 /* main.m */; };
 		4B36CDCF23C1E9B60099E2E3 /* YCQuantityComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B36CDCE23C1E9B60099E2E3 /* YCQuantityComponent.mm */; };
+		4B36CDD123C20FB10099E2E3 /* YCQuantityControl.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B36CDD023C20FB10099E2E3 /* YCQuantityControl.xcassets */; };
 		57846AD9FE8C824F3421114E /* libPods-YCQuantityControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A32DB4DEBDE97CE5E312349C /* libPods-YCQuantityControl.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		4B2F002223C19835009C2CB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B36CDCD23C1E9B60099E2E3 /* YCQuantityComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCQuantityComponent.h; sourceTree = "<group>"; };
 		4B36CDCE23C1E9B60099E2E3 /* YCQuantityComponent.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = YCQuantityComponent.mm; sourceTree = "<group>"; };
+		4B36CDD023C20FB10099E2E3 /* YCQuantityControl.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YCQuantityControl.xcassets; sourceTree = "<group>"; };
 		A32DB4DEBDE97CE5E312349C /* libPods-YCQuantityControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YCQuantityControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50402F22B671A5C9A590CB9 /* Pods-YCQuantityControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YCQuantityControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YCQuantityControl/Pods-YCQuantityControl.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 				4B2F001E23C19835009C2CB8 /* LaunchScreen.storyboard */,
 				4B2F002123C19835009C2CB8 /* Info.plist */,
 				4B2F002223C19835009C2CB8 /* main.m */,
+				4B36CDD023C20FB10099E2E3 /* YCQuantityControl.xcassets */,
 			);
 			path = YCQuantityControl;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			files = (
 				4B2F002023C19835009C2CB8 /* LaunchScreen.storyboard in Resources */,
 				4B2F001D23C19835009C2CB8 /* Assets.xcassets in Resources */,
+				4B36CDD123C20FB10099E2E3 /* YCQuantityControl.xcassets in Resources */,
 				4B2F001B23C19832009C2CB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

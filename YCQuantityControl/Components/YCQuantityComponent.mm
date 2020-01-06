@@ -8,9 +8,14 @@
 
 #import "YCQuantityComponent.h"
 
+#import <ComponentKit/CKComponentSubclass.h>
+
 @implementation YCQuantityComponent
 
 + (instancetype)newWithConfiguration:(const YCQuantityComponentConfiguration &)configuration {
+    
+    CKComponentScope scope(self);
+    
     return [super newWithComponent:
             [CKFlexboxComponent
              newWithView: {}
@@ -22,37 +27,58 @@
              }
              children:{
                 {
+                    [CKButtonComponent
+                     newWithAction:@selector(minusTapped)
+                     options:{
+                        .images = {
+                            {UIControlStateNormal, [UIImage imageNamed:@"minus_normal"]},
+                            {UIControlStateDisabled, [UIImage imageNamed:@"minus_disable"]}
+                        },
+                        .size = {24, 24}
+                     }]
+                },
+                {
                     [CKComponent
                      newWithView:{
-                        [UIView class],
-                        {
-                            {@selector(setBackgroundColor:), [UIColor blueColor]}
-                        }
-                     }
-                     size:{44, 44}],
-                },
-                {
-                    [CKComponent
-                    newWithView:{
-                       [UIView class],
+                       [UITextField class],
                        {
-                           {@selector(setBackgroundColor:), [UIColor redColor]}
+                           {@selector(setKeyboardType:), UIKeyboardTypeNumberPad},
+                           {@selector(setReturnKeyType:), UIReturnKeyDone},
+                           {@selector(setTextAlignment:), NSTextAlignmentCenter},
+                           {@selector(setClipsToBounds:), YES},
+                           {@selector(setEnablesReturnKeyAutomatically:), YES},
+                           {@selector(setText:), [NSString stringWithFormat:@"%@", scope.state()]}
                        }
                     }
-                    size:{.height = 44}],
-                    .flexGrow = 1
+                     size:{.height = 44}],
+                    .flexGrow = 1,
+                    .spacingBefore = 8,
+                    .spacingAfter = 8
                 },
                 {
-                    [CKComponent
-                    newWithView:{
-                       [UIView class],
-                       {
-                           {@selector(setBackgroundColor:), [UIColor blueColor]}
-                       }
-                    }
-                    size:{44, 44}],
-                }
+                    [CKButtonComponent
+                    newWithAction:@selector(addTapped)
+                    options:{
+                       .images = {
+                           {UIControlStateNormal, [UIImage imageNamed:@"add_normal"]},
+                           {UIControlStateDisabled, [UIImage imageNamed:@"add_disable"]}
+                       },
+                       .size = {24, 24}
+                    }]
+                },
             }]];
+}
+
++ (id)initialState {
+    return @(0);
+}
+
+- (void)minusTapped {
+    
+}
+
+- (void)addTapped {
+    
 }
 
 @end
